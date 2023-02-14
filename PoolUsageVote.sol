@@ -36,13 +36,13 @@ contract PoolUsageVote is Ownable {
   }
   function refreshResults () public {
       Results memory newResult;
+      address curOwner;
       newResult.grow=0;
       newResult.help=0;
       newResult.daouse=0;
       newResult.liquidate=0;
       uint256 totalSupply=rootTokens.totalSupply();
       for (uint256 i=1; i <= totalSupply; i++) {
-        address curOwner;
         curOwner = rootTokens.ownerOf(i);
         newResult.grow += poolVotes[curOwner].grow;
         newResult.help += poolVotes[curOwner].help;
