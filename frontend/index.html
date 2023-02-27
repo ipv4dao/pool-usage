@@ -1,0 +1,201 @@
+<link rel="stylesheet" href="style.css">
+<script type="text/javascript" src="script.js"></script>
+
+<div style="width: 30%; height: 35%; float: left;min-width:400px;">
+<div class="container">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 -0.5 77 20" shape-rendering="crispEdges">
+          <path stroke="#000000" d="M2 0h42M2 1h42M0 2h4M10 2h2M18 2h6M28 2h4M34 2h6M42 2h2M0 3h4M10 3h2M18 3h6M28 3h4M34 3h6M42 3h2M0 4h2M4 4h8M14 4h4M20 4h2M24 4h4M30 4h2M34 4h6M42 4h2M0 5h2M4 5h8M14 5h4M20 5h2M24 5h4M30 5h2M34 5h6M42 5h2M0 6h2M4 6h2M10 6h2M18 6h4M24 6h4M30 6h2M34 6h6M42 6h2M0 7h2M4 7h2M10 7h2M18 7h4M24 7h4M30 7h2M34 7h6M42 7h2M0 8h2M4 8h4M10 8h2M14 8h2M18 8h4M24 8h4M30 8h2M34 8h2M38 8h2M42 8h2M0 9h2M4 9h4M10 9h2M14 9h2M18 9h4M24 9h4M30 9h2M34 9h2M38 9h2M42 9h2M0 10h4M10 10h2M14 10h4M20 10h4M28 10h6M36 10h2M40 10h4M0 11h4M10 11h2M14 11h4M20 11h4M28 11h6M36 11h2M40 11h4M2 12h40M2 13h40" />
+          <path stroke="#ffffff" d="M4 2h6M12 2h6M24 2h4M32 2h2M40 2h2M4 3h6M12 3h6M24 3h4M32 3h2M40 3h2M2 4h2M12 4h2M18 4h2M22 4h2M28 4h2M32 4h2M40 4h2M2 5h2M12 5h2M18 5h2M22 5h2M28 5h2M32 5h2M40 5h2M2 6h2M6 6h4M12 6h6M22 6h2M28 6h2M32 6h2M40 6h2M2 7h2M6 7h4M12 7h6M22 7h2M28 7h2M32 7h2M40 7h2M2 8h2M8 8h2M12 8h2M16 8h2M22 8h2M28 8h2M32 8h2M36 8h2M40 8h2M2 9h2M8 9h2M12 9h2M16 9h2M22 9h2M28 9h2M32 9h2M36 9h2M40 9h2M4 10h6M12 10h2M18 10h2M24 10h4M34 10h2M38 10h2M4 11h6M12 11h2M18 11h2M24 11h4M34 11h2M38 11h2" />
+          </svg>
+    <!-- Dynamic healthbar -->
+    <svg class="healthbar" xmlns="http://www.w3.org/2000/svg" viewBox="0 -0.5 38 9" shape-rendering="crispEdges">
+        <path stroke="#222034" d="M2 0h34M1 1h1M36 1h1M0 2h1M3 2h32M37 2h1M0 3h1M2 3h1M35 3h1M37 3h1M0 4h1M2 4h1M35 4h1M37 4h1M0 5h1M2 5h1M35 5h1M37 5h1M0 6h1M3 6h32M37 6h1M1 7h1M36 7h1M2 8h34" />
+        <path stroke="#ffffff" d="M2 1h34" />
+        <path stroke="#f2f2f5" d="M1 2h2M35 2h2M1 3h1M36 3h1M1 4h1M36 4h1M1 5h1M36 5h1M1 6h2M35 6h2M2 7h34" />
+        <path stroke="#323c39" d="M3 3h32" />
+        <path stroke="#494d4c" d="M3 4h32M3 5h32" />
+        <!-- Fill container -->
+        <svg x="3" y="2.5" width="32" height="3">
+            <rect class="healthbar_fill" height="3" />
+            <rect class="healthbar_fill healthbar_fill-top" height="1" />
+        </svg>
+    </svg>
+
+   <!-- Buttons -->
+    <div class="button-container">
+        <button class="button" onclick="updateHealth(-15)">
+            <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/21542/HealthDemoDown.png" alt="Less Health" />
+        </button>
+        <button class="button" onclick="updateHealth(15)">
+            <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/21542/HealthDemoUp.png" alt="More Health" />
+        </button>
+    </div>
+</div>
+</div>
+<div style="width: 30%; height: 35%; float: left;min-width:400px;">
+<div class="container">
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 -0.5 40 10" shape-rendering="crispEdges">
+  <path stroke="#000000" d="M1 0h29M0 1h2M5 1h1M9 1h3M14 1h2M17 1h2M20 1h1M24 1h2M29 1h1M0 2h1M2 2h4M7 2h2M10 2h1M12 2h2M15 2h1M18 2h1M20 2h2M23 2h2M26 2h4M0 3h1M2 3h1M5 3h1M9 3h2M15 3h1M17 3h1M20 3h2M23 3h3M28 3h2M0 4h1M2 4h2M5 4h1M7 4h1M9 4h2M12 4h2M15 4h1M17 4h2M20 4h2M23 4h5M29 4h1M0 5h2M5 5h1M7 5h2M10 5h1M12 5h2M15 5h1M17 5h2M20 5h2M23 5h2M28 5h2M1 6h28" />
+  <path stroke="#ffffff" d="M2 1h3M6 1h3M12 1h2M16 1h1M19 1h1M21 1h3M26 1h3M1 2h1M6 2h1M9 2h1M11 2h1M14 2h1M16 2h2M19 2h1M22 2h1M25 2h1M1 3h1M3 3h2M6 3h3M11 3h4M16 3h1M18 3h2M22 3h1M26 3h2M1 4h1M4 4h1M6 4h1M8 4h1M11 4h1M14 4h1M16 4h1M19 4h1M22 4h1M28 4h1M2 5h3M6 5h1M9 5h1M11 5h1M14 5h1M16 5h1M19 5h1M22 5h1M25 5h3" />
+  </svg>
+    <!-- Dynamic healthbar -->
+    <svg class="healthbar" xmlns="http://www.w3.org/2000/svg" viewBox="0 -0.5 38 9" shape-rendering="crispEdges">
+        <path stroke="#222034" d="M2 0h34M1 1h1M36 1h1M0 2h1M3 2h32M37 2h1M0 3h1M2 3h1M35 3h1M37 3h1M0 4h1M2 4h1M35 4h1M37 4h1M0 5h1M2 5h1M35 5h1M37 5h1M0 6h1M3 6h32M37 6h1M1 7h1M36 7h1M2 8h34" />
+        <path stroke="#ffffff" d="M2 1h34" />
+        <path stroke="#f2f2f5" d="M1 2h2M35 2h2M1 3h1M36 3h1M1 4h1M36 4h1M1 5h1M36 5h1M1 6h2M35 6h2M2 7h34" />
+        <path stroke="#323c39" d="M3 3h32" />
+        <path stroke="#494d4c" d="M3 4h32M3 5h32" />
+        <!-- Fill container -->
+        <svg x="3" y="2.5" width="32" height="3">
+            <rect class="healthbar_fill" height="3" />
+            <rect class="healthbar_fill healthbar_fill-top" height="1" />
+        </svg>
+    </svg>
+
+   <!-- Buttons -->
+    <div class="button-container">
+        <button class="button" onclick="updateHealth(-15)">
+            <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/21542/HealthDemoDown.png" alt="Less Health" />
+        </button>
+        <button class="button" onclick="updateHealth(15)">
+            <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/21542/HealthDemoUp.png" alt="More Health" />
+        </button>
+    </div>
+</div>
+</div>
+<!--
+<div style="width: 30%; height: 35%; float: left;min-width:400px;">
+<div class="container">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 -0.5 41 10" shape-rendering="crispEdges">
+            <path stroke="#000000" d="M0 0h41M0 1h1M4 1h2M10 1h2M15 1h1M20 1h2M24 1h2M29 1h3M35 1h1M37 1h2M40 1h1M0 2h1M2 2h2M5 2h1M7 2h4M12 2h4M17 2h4M22 2h2M25 2h1M27 2h2M30 2h1M32 2h4M37 2h2M40 2h1M0 3h1M4 3h2M9 3h3M14 3h2M19 3h2M25 3h1M29 3h2M32 3h4M40 3h1M0 4h1M2 4h1M4 4h2M7 4h7M15 4h1M17 4h4M22 4h2M25 4h1M27 4h1M29 4h2M32 4h4M37 4h2M40 4h1M0 5h1M2 5h2M5 5h1M10 5h1M14 5h2M20 5h1M22 5h2M25 5h1M27 5h2M30 5h2M35 5h1M37 5h2M40 5h1M0 6h41" />
+            <path stroke="#ffffff" d="M1 1h3M6 1h4M12 1h3M16 1h4M22 1h2M26 1h3M32 1h3M36 1h1M39 1h1M1 2h1M4 2h1M6 2h1M11 2h1M16 2h1M21 2h1M24 2h1M26 2h1M29 2h1M31 2h1M36 2h1M39 2h1M1 3h3M6 3h3M12 3h2M16 3h3M21 3h4M26 3h3M31 3h1M36 3h4M1 4h1M3 4h1M6 4h1M14 4h1M16 4h1M21 4h1M24 4h1M26 4h1M28 4h1M31 4h1M36 4h1M39 4h1M1 5h1M4 5h1M6 5h4M11 5h3M16 5h4M21 5h1M24 5h1M26 5h1M29 5h1M32 5h3M36 5h1M39 5h1" />
+          </svg>
+    <svg class="healthbar" xmlns="http://www.w3.org/2000/svg" viewBox="0 -0.5 38 9" shape-rendering="crispEdges">
+        <path stroke="#222034" d="M2 0h34M1 1h1M36 1h1M0 2h1M3 2h32M37 2h1M0 3h1M2 3h1M35 3h1M37 3h1M0 4h1M2 4h1M35 4h1M37 4h1M0 5h1M2 5h1M35 5h1M37 5h1M0 6h1M3 6h32M37 6h1M1 7h1M36 7h1M2 8h34" />
+        <path stroke="#ffffff" d="M2 1h34" />
+        <path stroke="#f2f2f5" d="M1 2h2M35 2h2M1 3h1M36 3h1M1 4h1M36 4h1M1 5h1M36 5h1M1 6h2M35 6h2M2 7h34" />
+        <path stroke="#323c39" d="M3 3h32" />
+        <path stroke="#494d4c" d="M3 4h32M3 5h32" />
+        <svg x="3" y="2.5" width="32" height="3">
+            <rect class="healthbar_fill" height="3" />
+            <rect class="healthbar_fill healthbar_fill-top" height="1" />
+        </svg>
+    </svg>
+
+    <div class="button-container">
+        <button class="button" onclick="updateHealth(-15)">
+            <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/21542/HealthDemoDown.png" alt="Less Health" />
+        </button>
+        <button class="button" onclick="updateHealth(15)">
+            <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/21542/HealthDemoUp.png" alt="More Health" />
+        </button>
+    </div>
+</div>
+</div>
+-->
+<div style="width: 30%; height: 35%; float: left;min-width:400px;">
+<div class="container">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 -0.5 40 10" shape-rendering="crispEdges">
+            <path stroke="#000000" d="M0 0h8M10 0h26M0 1h1M2 1h1M4 1h2M7 1h1M10 1h1M12 1h2M15 1h2M19 1h2M22 1h2M25 1h2M30 1h1M35 1h1M0 2h1M2 2h1M5 2h1M7 2h4M12 2h2M15 2h1M17 2h2M20 2h1M22 2h2M25 2h1M27 2h4M32 2h4M0 3h1M2 3h1M4 3h1M7 3h1M10 3h1M15 3h1M17 3h2M20 3h1M22 3h2M25 3h2M29 3h2M34 3h1M0 4h1M2 4h1M4 4h2M7 4h4M12 4h2M15 4h1M17 4h2M20 4h1M22 4h2M25 4h4M30 4h1M32 4h4M0 5h1M2 5h1M4 5h2M7 5h1M10 5h1M12 5h2M15 5h2M19 5h2M25 5h1M29 5h2M35 5h1M0 6h8M10 6h26" />
+            <path stroke="#ffffff" d="M1 1h1M3 1h1M6 1h1M11 1h1M14 1h1M17 1h2M21 1h1M24 1h1M27 1h3M31 1h4M1 2h1M3 2h2M6 2h1M11 2h1M14 2h1M16 2h1M19 2h1M21 2h1M24 2h1M26 2h1M31 2h1M1 3h1M3 3h1M5 3h2M8 3h2M11 3h4M16 3h1M19 3h1M21 3h1M24 3h1M27 3h2M31 3h3M1 4h1M3 4h1M6 4h1M11 4h1M14 4h1M16 4h1M19 4h1M21 4h1M24 4h1M29 4h1M31 4h1M1 5h1M3 5h1M6 5h1M11 5h1M14 5h1M17 5h2M21 5h4M26 5h3M31 5h4" />
+          </svg>
+    <!-- Dynamic healthbar -->
+    <svg class="healthbar" xmlns="http://www.w3.org/2000/svg" viewBox="0 -0.5 38 9" shape-rendering="crispEdges">
+        <path stroke="#222034" d="M2 0h34M1 1h1M36 1h1M0 2h1M3 2h32M37 2h1M0 3h1M2 3h1M35 3h1M37 3h1M0 4h1M2 4h1M35 4h1M37 4h1M0 5h1M2 5h1M35 5h1M37 5h1M0 6h1M3 6h32M37 6h1M1 7h1M36 7h1M2 8h34" />
+        <path stroke="#ffffff" d="M2 1h34" />
+        <path stroke="#f2f2f5" d="M1 2h2M35 2h2M1 3h1M36 3h1M1 4h1M36 4h1M1 5h1M36 5h1M1 6h2M35 6h2M2 7h34" />
+        <path stroke="#323c39" d="M3 3h32" />
+        <path stroke="#494d4c" d="M3 4h32M3 5h32" />
+        <!-- Fill container -->
+        <svg x="3" y="2.5" width="32" height="3">
+            <rect class="healthbar_fill" height="3" />
+            <rect class="healthbar_fill healthbar_fill-top" height="1" />
+        </svg>
+    </svg>
+
+   <!-- Buttons -->
+    <div class="button-container">
+        <button class="button" onclick="updateHealth(-15)">
+            <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/21542/HealthDemoDown.png" alt="Less Health" />
+        </button>
+        <button class="button" onclick="updateHealth(15)">
+            <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/21542/HealthDemoUp.png" alt="More Health" />
+        </button>
+    </div>
+
+</div>
+</div>
+<div style="width: 30%; height: 35%; float: left;min-width:400px;">
+<div class="container">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 -0.5 40 10" shape-rendering="crispEdges">
+            <path stroke="#000000" d="M0 0h21M0 1h1M4 1h2M7 1h2M10 1h1M14 1h2M17 1h2M20 1h1M0 2h1M2 2h2M5 2h1M7 2h2M10 2h1M12 2h2M15 2h1M18 2h1M20 2h1M0 3h1M4 3h2M7 3h2M10 3h1M14 3h2M17 3h1M20 3h1M0 4h1M2 4h2M5 4h1M7 4h2M10 4h1M12 4h1M14 4h2M17 4h2M20 4h1M0 5h1M4 5h2M10 5h1M12 5h2M15 5h1M17 5h2M20 5h1M0 6h21" />
+            <path stroke="#ffffff" d="M1 1h3M6 1h1M9 1h1M11 1h3M16 1h1M19 1h1M1 2h1M4 2h1M6 2h1M9 2h1M11 2h1M14 2h1M16 2h2M19 2h1M1 3h3M6 3h1M9 3h1M11 3h3M16 3h1M18 3h2M1 4h1M4 4h1M6 4h1M9 4h1M11 4h1M13 4h1M16 4h1M19 4h1M1 5h3M6 5h4M11 5h1M14 5h1M16 5h1M19 5h1" />          </svg>
+    <!-- Dynamic healthbar -->
+    <svg class="healthbar" xmlns="http://www.w3.org/2000/svg" viewBox="0 -0.5 38 9" shape-rendering="crispEdges">
+        <path stroke="#222034" d="M2 0h34M1 1h1M36 1h1M0 2h1M3 2h32M37 2h1M0 3h1M2 3h1M35 3h1M37 3h1M0 4h1M2 4h1M35 4h1M37 4h1M0 5h1M2 5h1M35 5h1M37 5h1M0 6h1M3 6h32M37 6h1M1 7h1M36 7h1M2 8h34" />
+        <path stroke="#ffffff" d="M2 1h34" />
+        <path stroke="#f2f2f5" d="M1 2h2M35 2h2M1 3h1M36 3h1M1 4h1M36 4h1M1 5h1M36 5h1M1 6h2M35 6h2M2 7h34" />
+        <path stroke="#323c39" d="M3 3h32" />
+        <path stroke="#494d4c" d="M3 4h32M3 5h32" />
+        <!-- Fill container -->
+        <svg x="3" y="2.5" width="32" height="3">
+            <rect class="healthbar_fill" height="3" />
+            <rect class="healthbar_fill healthbar_fill-top" height="1" />
+        </svg>
+    </svg>
+
+   <!-- Buttons -->
+    <div class="button-container">
+        <button class="button" onclick="updateHealth(-15)">
+            <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/21542/HealthDemoDown.png" alt="Less Health" />
+        </button>
+        <button class="button" onclick="updateHealth(15)">
+            <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/21542/HealthDemoUp.png" alt="More Health" />
+        </button>
+    </div>
+
+</div>
+</div>
+<script id="rendered-js">
+var fills = document.querySelectorAll(".healthbar_fill");
+
+var health = 75;
+var maxHp = 100;
+
+function renderHealth() {
+
+  var percent = health / maxHp * 100;
+
+  //Update color
+  document.documentElement.style.setProperty('--bar-fill', '#57e705');
+  document.documentElement.style.setProperty('--bar-top', '#6aff03');
+
+  if (percent <= 50) {//yellows
+    document.documentElement.style.setProperty('--bar-fill', '#d6ed20');
+    document.documentElement.style.setProperty('--bar-top', '#d8ff48');
+  }
+  if (percent <= 25) {//reds
+    document.documentElement.style.setProperty('--bar-fill', '#ec290a');
+    document.documentElement.style.setProperty('--bar-top', '#ff3818');
+  }
+
+
+
+  fills.forEach(fill => {
+    fill.style.width = percent + "%";
+  });
+}
+
+function updateHealth(change) {
+  health += change;
+  health = health > maxHp ? maxHp : health;
+  health = health < 0 ? 0 : health;
+
+  renderHealth();
+}
+
+
+//init
+updateHealth(0);
+//# sourceURL=pen.js
+    </script>
