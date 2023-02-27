@@ -14,6 +14,12 @@ body {
    margin: 4em auto;
 }
 
+.boxes {
+  min-height:400px;
+  float: left;
+  min-width:500px;
+}
+
 .title {
    width: calc(9px * var(--pixel-size));
    margin-bottom: calc(2px * var(--pixel-size));
@@ -34,6 +40,40 @@ body {
    fill: var(--bar-top);
 }
 
+.growbar_fill {
+/*    width: 100%; */
+   fill: var(--bar-fill);
+   transition: width 0.1s ease-in, fill 0.2s linear;
+}
+.growbar_fill-top {
+   fill: var(--bar-top);
+}
+
+.grantsbar_fill {
+/*    width: 100%; */
+   fill: var(--bar-fill);
+   transition: width 0.1s ease-in, fill 0.2s linear;
+}
+.grantsbar_fill-top {
+   fill: var(--bar-top);
+}
+
+.inhousebar_fill {
+/*    width: 100%; */
+   fill: var(--bar-fill);
+   transition: width 0.1s ease-in, fill 0.2s linear;
+}
+.inhousebar_fill-top {
+   fill: var(--bar-top);
+}
+.burnbar_fill {
+/*    width: 100%; */
+   fill: var(--bar-fill);
+   transition: width 0.1s ease-in, fill 0.2s linear;
+}
+.burnbar_fill-top {
+   fill: var(--bar-top);
+}
 
 .button-container {
    display: flex;
@@ -55,15 +95,4 @@ body {
    width: calc(9px * var(--pixel-size));
    image-rendering: pixelated;
 
-}
-
-.character {
-  visibility:hidden;
-    width: calc(15px * var(--pixel-size));
-   image-rendering: pixelated;
-   margin: 0 auto;
-   display: block;
-}
-.dead {
-   display:none;
 }
